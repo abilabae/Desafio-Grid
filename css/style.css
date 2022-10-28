@@ -1,0 +1,182 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+nav{
+  grid-area: nav;
+}
+
+header{
+  grid-area:header;
+}
+
+sidebar{
+  grid-area:sidebar;
+}
+
+section{
+  grid-area:section;
+ 
+}
+
+footer{
+  grid-area:footer;
+}
+
+.container{
+  display:grid;
+  grid-template-columns: 1fr 6fr;
+  gap: 5px;
+  grid-template-areas:
+    "header header"
+    "nav nav"
+    "sidebar section"
+    "footer footer";
+}
+
+
+.grid-container-nav{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color:green;
+}
+
+.grid-container-nav p{
+  color: white;
+  margin:10px;
+}
+
+
+.grid-container-header{
+  background-image: url(../images/verduras.jpg);
+  background-size: cover;
+  display:grid;
+  height: 150px;
+  color: white;
+  text-align: center;
+    
+}
+
+.grid-container-header h1{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container-sidebar{
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+      
+}
+
+.dropdown h2{
+display:flex;
+flex-direction: column;
+text-align:center;
+
+}
+
+.dropdown{
+display:inline-block;  
+position:relative;
+
+}
+
+.dropdown-content {
+display: none;
+position: relative;
+width: auto;
+
+
+}
+
+.dropdown:hover .dropdown-content {
+display: flex;
+flex-direction:column;
+
+}
+
+.dropdown-content a {
+display: flex;
+color: black;
+padding: 5px;
+text-decoration: none;
+justify-content: center;
+}
+
+.dropdown-content a:hover {
+color: white;
+background-color: green;
+}
+
+ 
+.grid-container-section{
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction:row;
+  justify-content: space-around;
+       
+}
+
+.card{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width:30%;
+  height: calc(100vw-0.3);
+}
+
+.card-img{
+  width: 100%;
+  height: 70%;
+}
+
+.card-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-body{
+  height: 20%;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.card-body button{
+  margin-top:auto;
+  width: 100%;
+  border:0;
+  background-color: green;
+  color: white;
+  height: 2rem;
+}
+
+.grid-container-footer{
+  height: 100px;
+  background-color: green;
+  color:white;
+  text-align:center;
+}
+
+.grid-container-footer h3{
+  margin-top: 10px ;
+}
+
+.grid-container-footer i{
+  margin:20px;
+  
+}
